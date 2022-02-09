@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "superarrows",
+  "version": "${version}",
+
+  "name": "Super Arrows",
+  "description": "This mod provide new types of arrows",
+  "authors": [
+    "indiecog"
+  ],
+  "contact": {
+    "homepage": "https://github.com/baptiste1403/SuperArrows",
+    "sources": "https://github.com/baptiste1403/SuperArrows"
+  },
+
+  "license": "",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "fr.indiecog.superarrows.SuperArrowsMod"
+    ]
+  },
+  "mixins": [
+    "superarrows.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.1",
+    "fabric": "*",
+    "minecraft": "1.18.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
