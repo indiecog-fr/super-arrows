@@ -53,8 +53,6 @@ public class GlowingArrowEntity extends ArrowEntity {
         } else {
             dropItemtorch(blockHitResult.getBlockPos().offset(blockHitResult.getSide()));
         }
-
-
     }
 
     private void dropItemtorch(BlockPos pos) {
