@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "superarrows:explosive_arrow"
+    "superarrows:explosive_arrow",
+    "superarrows:glowing_arrow"
   ]
 }
