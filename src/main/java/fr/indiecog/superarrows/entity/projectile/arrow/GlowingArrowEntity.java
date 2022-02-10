@@ -43,7 +43,7 @@ public class GlowingArrowEntity extends ArrowEntity {
     protected void onBlockHit(BlockHitResult blockHitResult) {
         BlockState bs;
 
-        if(blockHitResult.getSide() == Direction.DOWN) {
+        if(blockHitResult.getSide() == Direction.DOWN || !world.isAir(blockHitResult.getBlockPos().offset(blockHitResult.getSide()))) {
             // The position of the conveyor (pos in your code)
             BlockPos currentPosition = blockHitResult.getBlockPos().offset(Direction.DOWN, 2);
             // Create an item entity with velocity 0
