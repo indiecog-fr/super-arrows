@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TAT",
+    "ASA",
+    "TAT"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:torch"
+    },
+    "A": {
+      "item": "minecraft:arrow"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "item": "superarrows:glowing_arrow",
+    "count": 4
+  }
+}
