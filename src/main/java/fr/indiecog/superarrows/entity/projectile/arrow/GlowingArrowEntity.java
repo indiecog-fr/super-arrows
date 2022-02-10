@@ -3,10 +3,7 @@ package fr.indiecog.superarrows.entity.projectile.arrow;
 import fr.indiecog.superarrows.SuperArrowsMod;
 import fr.indiecog.superarrows.item.arrow.GlowingArrowItem;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.WallTorchBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -42,14 +39,8 @@ public class GlowingArrowEntity extends ArrowEntity {
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
         BlockState bs;
-
-        if(blockHitResult.getSide() == Direction.DOWN) {
-            // The position of the conveyor (pos in your code)
-            BlockPos currentPosition = blockHitResult.getBlockPos().offset(Direction.DOWN, 2);
-            // Create an item entity with velocity 0
-            ItemEntity itemEntity = new ItemEntity(world, currentPosition.north().getX(), currentPosition.up().getY(), currentPosition.getZ(), Items.TORCH.getDefaultStack(), 0, 0, 0);
-            // Spawn the item entity
-            world.spawnEntity(itemEntity);
+        if(blockHitResult.getSide() == Direction.DOWN || !world.isAir(blockHitResult.getBlockPos().offset(blockHitResult.getSide()))) {
+            dropItemtorch(blockHitResult.getBlockPos().offset(Direction.DOWN, 2));
             return;
         } else if(blockHitResult.getSide() == Direction.UP) {
             bs = Blocks.TORCH.getDefaultState();
@@ -57,8 +48,20 @@ public class GlowingArrowEntity extends ArrowEntity {
             bs = Blocks.WALL_TORCH.getDefaultState().with(WallTorchBlock.FACING, blockHitResult.getSide());
         }
 
-        world.setBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide()), bs, Block.NOTIFY_ALL);
+        if(bs.canPlaceAt(world, blockHitResult.getBlockPos().offset(blockHitResult.getSide()))) {
+            world.setBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide()), bs, Block.NOTIFY_ALL);
+        } else {
+            dropItemtorch(blockHitResult.getBlockPos().offset(blockHitResult.getSide()));
+        }
 
+
+    }
+
+    private void dropItemtorch(BlockPos pos) {
+        // Create an item entity with velocity 0
+        ItemEntity itemEntity = new ItemEntity(world, pos.north().getX(), pos.up().getY(), pos.getZ(), Items.TORCH.getDefaultStack(), 0, 0, 0);
+        // Spawn the item entity
+        world.spawnEntity(itemEntity);
     }
 
 
