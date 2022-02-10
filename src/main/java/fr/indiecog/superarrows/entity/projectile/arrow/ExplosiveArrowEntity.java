@@ -25,7 +25,8 @@ public class ExplosiveArrowEntity extends ArrowEntity {
 
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
-        world.createExplosion(this,getBlockX(),getBlockY(),getBlockZ(),2,true, Explosion.DestructionType.BREAK);
+        world.createExplosion(this,getBlockX(),getBlockY(),getBlockZ(),4,true, Explosion.DestructionType.BREAK);
+        this.remove(RemovalReason.DISCARDED);
     }
 
     @Override
