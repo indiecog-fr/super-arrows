@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.WallTorchBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -44,16 +45,16 @@ public class GlowingArrowEntity extends ArrowEntity {
 
         if(blockHitResult.getSide() == Direction.DOWN) {
             // The position of the conveyor (pos in your code)
-            BlockPos currentPosition = blockHitResult.getBlockPos().offset(Direction.DOWN);
+            BlockPos currentPosition = blockHitResult.getBlockPos().offset(Direction.DOWN, 2);
             // Create an item entity with velocity 0
-            ItemEntity itemEntity = new ItemEntity(world, currentPosition.north().getX(), currentPosition.up().getY(), currentPosition.getZ() + 0.5, Items.TORCH.getDefaultStack(), 0, 0, 0);
+            ItemEntity itemEntity = new ItemEntity(world, currentPosition.north().getX(), currentPosition.up().getY(), currentPosition.getZ(), Items.TORCH.getDefaultStack(), 0, 0, 0);
             // Spawn the item entity
             world.spawnEntity(itemEntity);
             return;
         } else if(blockHitResult.getSide() == Direction.UP) {
             bs = Blocks.TORCH.getDefaultState();
         } else {
-            bs = Blocks.WALL_TORCH.getDefaultState();
+            bs = Blocks.WALL_TORCH.getDefaultState().with(WallTorchBlock.FACING, blockHitResult.getSide());
         }
 
         world.setBlockState(blockHitResult.getBlockPos().offset(blockHitResult.getSide()), bs, Block.NOTIFY_ALL);
