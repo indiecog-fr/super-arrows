@@ -2,6 +2,7 @@ package fr.indiecog.superarrows;
 
 import fr.indiecog.superarrows.entity.projectile.arrow.ExplosiveArrowEntity;
 import fr.indiecog.superarrows.entity.projectile.arrow.GlowingArrowEntity;
+import fr.indiecog.superarrows.item.SuperArrowsItems;
 import fr.indiecog.superarrows.item.arrow.ExplosiveArrowItem;
 import fr.indiecog.superarrows.item.arrow.GlowingArrowItem;
 import net.fabricmc.api.ModInitializer;
@@ -27,12 +28,9 @@ public class SuperArrowsMod implements ModInitializer {
             new Identifier(MODID,"explosive_arrow"),
             FabricEntityTypeBuilder.<ExplosiveArrowEntity>create(SpawnGroup.MISC,ExplosiveArrowEntity::new).build());
 
-    public static final ExplosiveArrowItem EXPLOSIVE_ARROW_ITEM = new ExplosiveArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT));
-    public static final GlowingArrowItem GLOWING_ARROW_ITEM = new GlowingArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT));
 
     @Override
     public void onInitialize() {
-        Registry.register(Registry.ITEM,new Identifier(MODID,"explosive_arrow"),EXPLOSIVE_ARROW_ITEM);
-        Registry.register(Registry.ITEM,new Identifier(MODID,"glowing_arrow"),GLOWING_ARROW_ITEM);
+        SuperArrowsItems.init();
     }
 }

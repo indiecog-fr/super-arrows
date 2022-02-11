@@ -1,5 +1,6 @@
 package fr.indiecog.superarrows.entity.projectile.arrow;
 
+import fr.indiecog.superarrows.item.SuperArrowsItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
@@ -7,8 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
-
-import static fr.indiecog.superarrows.SuperArrowsMod.EXPLOSIVE_ARROW_ITEM;
 
 public class ExplosiveArrowEntity extends ArrowEntity {
     public ExplosiveArrowEntity(EntityType<? extends ArrowEntity> entityType, World world) {
@@ -31,6 +30,6 @@ public class ExplosiveArrowEntity extends ArrowEntity {
 
     @Override
     protected ItemStack asItemStack() {
-        return new ItemStack(EXPLOSIVE_ARROW_ITEM);
+        return new ItemStack(SuperArrowsItems.EXPLOSIVE_ARROW_ITEM);
     }
 }
