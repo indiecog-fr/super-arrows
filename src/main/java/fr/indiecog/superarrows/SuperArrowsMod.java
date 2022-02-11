@@ -1,5 +1,6 @@
 package fr.indiecog.superarrows;
 
+import fr.indiecog.superarrows.entity.SuperArrowsEntities;
 import fr.indiecog.superarrows.entity.projectile.arrow.ExplosiveArrowEntity;
 import fr.indiecog.superarrows.entity.projectile.arrow.GlowingArrowEntity;
 import fr.indiecog.superarrows.item.SuperArrowsItems;
@@ -18,19 +19,10 @@ import net.minecraft.util.registry.Registry;
 public class SuperArrowsMod implements ModInitializer {
 
     public static final String MODID = "superarrows";
-    public static final EntityType<GlowingArrowEntity> GLOWING_ARROW_ENTITY = Registry.register(
-            Registry.ENTITY_TYPE,
-            new Identifier(MODID, "glowing_arrow"),
-            FabricEntityTypeBuilder.<GlowingArrowEntity>create(SpawnGroup.CREATURE, GlowingArrowEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
-    );
-    public static final EntityType<ExplosiveArrowEntity> EXPLOSIVE_ARROW_ENTITY = Registry.register(
-            Registry.ENTITY_TYPE,
-            new Identifier(MODID,"explosive_arrow"),
-            FabricEntityTypeBuilder.<ExplosiveArrowEntity>create(SpawnGroup.MISC,ExplosiveArrowEntity::new).build());
-
 
     @Override
     public void onInitialize() {
         SuperArrowsItems.init();
+        SuperArrowsEntities.init();
     }
 }
