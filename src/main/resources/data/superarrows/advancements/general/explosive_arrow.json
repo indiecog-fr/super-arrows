@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "superarrows:explosive_arrow"
+    },
+    "title": "Let's go BOOM !",
+    "description": "Time to go crazy !",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "superarrows:general/root",
+  "criteria": {
+    "has_explosive_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "superarrows:explosive_arrow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_explosive_arrow"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

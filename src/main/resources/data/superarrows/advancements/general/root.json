@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "superarrows:explosive_arrow"
+    },
+    "title": "Super Arrows",
+    "description": "Here comes great responsibilities",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:arrow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_arrow"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "superarrows:explosive_arrow",
+      "superarrows:glowing_arrow"
+    ]
+  }
+}

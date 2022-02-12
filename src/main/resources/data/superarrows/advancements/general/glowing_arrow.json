@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "superarrows:glowing_arrow"
+    },
+    "title": "No more Nyctophobia",
+    "description": "Spread light around you",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "superarrows:general/root",
+  "criteria": {
+    "has_glowing_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "superarrows:glowing_arrow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glowing_arrow"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}
