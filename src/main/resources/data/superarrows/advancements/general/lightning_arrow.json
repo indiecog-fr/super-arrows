@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "superarrows:lightning_arrow"
+    },
+    "title": "Even Zeus is scared of you",
+    "description": "Become a god !",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "superarrows:general/root",
+  "criteria": {
+    "has_lightning_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "superarrows:lightning_arrow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lightning_arrow"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}
