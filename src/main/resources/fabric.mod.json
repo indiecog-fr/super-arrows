@@ -14,12 +14,15 @@
   },
 
   "license": "",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/superarrows/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "fr.indiecog.superarrows.SuperArrowsMod"
+    ],
+    "client": [
+      "fr.indiecog.superarrows.SuperArrowsModClient"
     ]
   },
   "mixins": [

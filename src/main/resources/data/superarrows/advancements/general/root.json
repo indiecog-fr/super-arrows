@@ -5,6 +5,7 @@
     },
     "title": "Super Arrows",
     "description": "Here comes great responsibilities",
+    "background": "superarrows:textures/gui/advancements/background/superarrows.png",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

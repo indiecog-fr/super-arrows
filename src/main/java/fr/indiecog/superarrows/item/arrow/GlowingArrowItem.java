@@ -1,6 +1,7 @@
 package fr.indiecog.superarrows.item.arrow;
 
 import fr.indiecog.superarrows.entity.projectile.arrow.GlowingArrowEntity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
@@ -15,8 +16,6 @@ public class GlowingArrowItem extends ArrowItem {
 
     @Override
     public PersistentProjectileEntity createArrow(World world, ItemStack stack, LivingEntity shooter) {
-        GlowingArrowEntity arrowEntity = new GlowingArrowEntity(world, shooter);
-        arrowEntity.initFromStack(stack);
-        return arrowEntity;
+        return new GlowingArrowEntity(world, shooter);
     }
 }
