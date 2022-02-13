@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "fr.indiecog.superarrows.SuperArrowsMod"
+    ],
+    "client": [
+      "fr.indiecog.superarrows.SuperArrowsModClient"
     ]
   },
   "mixins": [

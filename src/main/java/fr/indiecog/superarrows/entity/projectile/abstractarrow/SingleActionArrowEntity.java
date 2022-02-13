@@ -3,28 +3,30 @@ package fr.indiecog.superarrows.entity.projectile.abstractarrow;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 
-public abstract class SingleActionArrowEntity extends ArrowEntity {
+public abstract class SingleActionArrowEntity extends PersistentProjectileEntity {
 
     private boolean isActionFinish;
 
-    public SingleActionArrowEntity(EntityType<? extends ArrowEntity> entityType, World world) {
+    protected SingleActionArrowEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
         super(entityType, world);
-        isActionFinish = false;
     }
 
-    public SingleActionArrowEntity(World world, double x, double y, double z) {
-        super(world, x, y, z);
-        isActionFinish = false;
+    protected SingleActionArrowEntity(EntityType<? extends PersistentProjectileEntity> type, double x, double y, double z, World world) {
+        super(type, x, y, z, world);
     }
 
-    public SingleActionArrowEntity(World world, LivingEntity owner) {
-        super(world, owner);
-        isActionFinish = false;
+    protected SingleActionArrowEntity(EntityType<? extends PersistentProjectileEntity> type, LivingEntity owner, World world) {
+        super(type, owner, world);
     }
+
 
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
