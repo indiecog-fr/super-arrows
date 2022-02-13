@@ -15,6 +15,6 @@ public class GlowingArrowEntityRenderer extends ProjectileEntityRenderer<Glowing
 
     @Override
     public Identifier getTexture(GlowingArrowEntity entity) {
-        return new Identifier("superarrows", "textures/entity/projectiles/arrow.png");
+        return new Identifier("superarrows", "textures/entity/projectiles/glowing_arrow.png");
     }
 }
