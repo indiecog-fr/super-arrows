@@ -15,6 +15,6 @@ public class ExplosiveArrowItem extends ArrowItem {
 
     @Override
     public PersistentProjectileEntity createArrow(World world, ItemStack stack, LivingEntity shooter) {
-        return new ExplosiveArrowEntity(world,shooter);
+        return new ExplosiveArrowEntity(shooter,world);
     }
 }
