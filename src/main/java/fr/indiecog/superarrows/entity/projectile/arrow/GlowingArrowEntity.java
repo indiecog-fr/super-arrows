@@ -80,15 +80,6 @@ public class GlowingArrowEntity extends SingleActionArrowEntity {
         return new ItemStack(SuperArrowsItems.GLOWING_ARROW_ITEM);
     }
 
-    public void onPlayerCollision(PlayerEntity player) {
-        if (!this.world.isClient && (this.inGround || this.isNoClip()) && this.shake <= 0) {
-            if (this.tryPickup(player)) {
-                player.sendPickup(this, 1);
-                this.discard();
-            }
-        }
-    }
-
     @Override
     protected boolean tryPickup(PlayerEntity player) {
         switch(this.pickupType) {
