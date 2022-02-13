@@ -1,5 +1,6 @@
 package fr.indiecog.superarrows.entity.projectile.arrow;
 
+import fr.indiecog.superarrows.SuperArrowsMod;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -15,6 +16,6 @@ public class GlowingArrowEntityRenderer extends ProjectileEntityRenderer<Glowing
 
     @Override
     public Identifier getTexture(GlowingArrowEntity entity) {
-        return new Identifier("superarrows", "textures/entity/projectiles/glowing_arrow.png");
+        return new Identifier(SuperArrowsMod.MODID, "textures/entity/projectiles/glowing_arrow.png");
     }
 }
