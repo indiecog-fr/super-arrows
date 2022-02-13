@@ -1,14 +1,26 @@
 package fr.indiecog.superarrows.entity.projectile.arrow;
 
+
+import com.google.common.collect.Sets;
+import fr.indiecog.superarrows.entity.SuperArrowsEntities;
 import fr.indiecog.superarrows.entity.projectile.abstractarrow.SingleActionArrowEntity;
+import fr.indiecog.superarrows.item.SuperArrowsItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.WallTorchBlock;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.potion.Potions;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -17,16 +29,17 @@ import net.minecraft.world.World;
 
 public class GlowingArrowEntity extends SingleActionArrowEntity {
 
+
     public GlowingArrowEntity(EntityType<? extends GlowingArrowEntity> entityType, World world) {
         super(entityType, world);
     }
 
     public GlowingArrowEntity(World world, double x, double y, double z) {
-        super(world, x, y, z);
+        super(SuperArrowsEntities.GLOWING_ARROW_ENTITY, x, y, z, world);
     }
 
     public GlowingArrowEntity(World world, LivingEntity owner) {
-        super(world, owner);
+        super(SuperArrowsEntities.GLOWING_ARROW_ENTITY, owner, world);
     }
 
     @Override
@@ -60,5 +73,31 @@ public class GlowingArrowEntity extends SingleActionArrowEntity {
         ItemEntity itemEntity = new ItemEntity(world, pos.north().getX(), pos.up().getY(), pos.getZ(), Items.TORCH.getDefaultStack(), 0, 0, 0);
         // Spawn the item entity
         world.spawnEntity(itemEntity);
+    }
+
+    @Override
+    protected ItemStack asItemStack() {
+        return new ItemStack(SuperArrowsItems.GLOWING_ARROW_ITEM);
+    }
+
+    public void onPlayerCollision(PlayerEntity player) {
+        if (!this.world.isClient && (this.inGround || this.isNoClip()) && this.shake <= 0) {
+            if (this.tryPickup(player)) {
+                player.sendPickup(this, 1);
+                this.discard();
+            }
+        }
+    }
+
+    @Override
+    protected boolean tryPickup(PlayerEntity player) {
+        switch(this.pickupType) {
+            case ALLOWED:
+                return player.getInventory().insertStack(new ItemStack(Items.ARROW));
+            case CREATIVE_ONLY:
+                return player.getAbilities().creativeMode;
+            default:
+                return false;
+        }
     }
 }

@@ -20,7 +20,7 @@ public class SuperArrowsEntities {
 
     public static final EntityType<GlowingArrowEntity> GLOWING_ARROW_ENTITY =
             register("glowing_arrow",
-                    FabricEntityTypeBuilder.<GlowingArrowEntity>create(SpawnGroup.CREATURE, GlowingArrowEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)));
+                    FabricEntityTypeBuilder.create(SpawnGroup.MISC, GlowingArrowEntity::new));
 
 
     public static void init() {
