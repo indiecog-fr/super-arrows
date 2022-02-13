@@ -46,11 +46,12 @@ public abstract class SingleActionArrowEntity extends ArrowEntity {
 
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
-        super.onEntityHit(entityHitResult);
+
         if(!isActionFinish) {
             entityHitAction(entityHitResult);
             isActionFinish = true;
         }
+        super.onEntityHit(entityHitResult);
     }
 
     protected abstract void blockHitAction(BlockHitResult blockHitResult);
