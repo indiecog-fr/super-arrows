@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PAP",
+    "ALA",
+    "PAP"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lightning_rod"
+    },
+    "A": {
+      "item": "minecraft:arrow"
+    },
+    "P": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "result": {
+    "item": "superarrows:lightning_arrow",
+    "count": 4
+  }
+}

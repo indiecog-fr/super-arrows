@@ -32,7 +32,8 @@
   "rewards": {
     "recipes": [
       "superarrows:explosive_arrow",
-      "superarrows:glowing_arrow"
+      "superarrows:glowing_arrow",
+      "superarrows:lightning_arrow"
     ]
   }
 }
