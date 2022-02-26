@@ -9,13 +9,12 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class TracingArrowEntity extends PersistentProjectileEntity {
 
     private boolean hasGravity;
+    private final float speedMultiplier = 3;
 
     public TracingArrowEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
         super(entityType, world);
@@ -39,12 +38,12 @@ public class TracingArrowEntity extends PersistentProjectileEntity {
 
     @Override
     public void setVelocity(double x, double y, double z, float speed, float divergence) {
-        super.setVelocity(x, y, z, speed*10, divergence);
+        super.setVelocity(x, y, z, speed*speedMultiplier, divergence);
     }
 
     @Override
     public void setVelocity(Entity shooter, float pitch, float yaw, float roll, float speed, float divergence) {
-        super.setVelocity(shooter, pitch, yaw, roll, speed*5, divergence);
+        super.setVelocity(shooter, pitch, yaw, roll, speed*speedMultiplier, divergence);
     }
 
     @Override
@@ -58,5 +57,8 @@ public class TracingArrowEntity extends PersistentProjectileEntity {
         return new ItemStack(SuperArrowsItems.TRACING_ARROW_ITEM);
     }
 
-
+    @Override
+    public double getDamage() {
+        return super.getDamage();
+    }
 }
