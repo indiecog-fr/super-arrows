@@ -3,21 +3,21 @@
     "icon": {
       "item": "superarrows:explosive_arrow"
     },
-    "title": "Super Arrows",
-    "description": "Here comes great responsibilities",
-    "background": "superarrows:textures/gui/advancements/background/superarrows.png",
+    "title": "Don't Stop Me Now",
+    "description": "Shoot at the speed of light",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "superarrows:general/root",
   "criteria": {
-    "has_arrow": {
+    "has_tracing_arrow": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:arrow"
+              "superarrows:tracing_arrow"
             ]
           }
         ]
@@ -26,15 +26,10 @@
   },
   "requirements": [
     [
-      "has_arrow"
+      "has_tracing_arrow"
     ]
   ],
   "rewards": {
-    "recipes": [
-      "superarrows:explosive_arrow",
-      "superarrows:glowing_arrow",
-      "superarrows:lightning_arrow",
-      "superarrows:tracing_arrow"
-    ]
+    "experience": 100
   }
 }
