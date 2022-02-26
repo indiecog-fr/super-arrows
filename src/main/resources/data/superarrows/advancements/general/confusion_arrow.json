@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "superarrows:explosive_arrow"
+    },
+    "title": "Who am I ???",
+    "description": "Make a mob have an identity crisis",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "superarrows:general/root",
+  "criteria": {
+    "has_confusion_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "superarrows:confusion_arrow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_confusion_arrow"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}
