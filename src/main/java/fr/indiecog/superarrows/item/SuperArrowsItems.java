@@ -1,5 +1,6 @@
 package fr.indiecog.superarrows.item;
 
+import fr.indiecog.superarrows.item.arrow.ConfusionArrowItem;
 import fr.indiecog.superarrows.item.arrow.ExplosiveArrowItem;
 import fr.indiecog.superarrows.item.arrow.GlowingArrowItem;
 import fr.indiecog.superarrows.item.arrow.LightningArrowItem;
@@ -16,6 +17,7 @@ public class SuperArrowsItems {
     public static final Item EXPLOSIVE_ARROW_ITEM = new ExplosiveArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT));
     public static final Item GLOWING_ARROW_ITEM = new GlowingArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT));
     public static final Item LIGHTNING_ARROW_ITEM = new LightningArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT));
+    public static final Item CONFUSION_ARROW_ITEM = new ConfusionArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT));
 
     private static void register(String id, Item item) {
         Registry.register(Registry.ITEM,new Identifier(MODID,id),item);
@@ -25,5 +27,6 @@ public class SuperArrowsItems {
         register("explosive_arrow",EXPLOSIVE_ARROW_ITEM);
         register("glowing_arrow",GLOWING_ARROW_ITEM);
         register("lightning_arrow",LIGHTNING_ARROW_ITEM);
+        register("confusion_arrow", CONFUSION_ARROW_ITEM);
     }
 }
