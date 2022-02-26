@@ -16,6 +16,6 @@ public class ConfusionArrowEntityRenderer extends ProjectileEntityRenderer<Confu
 
     @Override
     public Identifier getTexture(ConfusionArrowEntity entity) {
-        return new Identifier(SuperArrowsMod.MODID,"textures/entity/projectiles/lightning_arrow.png");
+        return new Identifier(SuperArrowsMod.MODID,"textures/entity/projectiles/confusion_arrow.png");
     }
 }
