@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GAN",
+    "ASA",
+    "RAB"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:red_mushroom"
+    },
+    "A": {
+      "item": "minecraft:arrow"
+    },
+    "B": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "G": {
+      "item": "minecraft:warped_fungus"
+    },
+    "N": {
+      "item": "minecraft:crimson_fungus"
+    },
+    "S": {
+      "item": "minecraft:fermented_spider_eye"
+    }
+  },
+  "result": {
+    "item": "superarrows:confusion_arrow",
+    "count": 4
+  }
+}

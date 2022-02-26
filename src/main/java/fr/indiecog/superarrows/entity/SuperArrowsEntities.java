@@ -1,5 +1,6 @@
 package fr.indiecog.superarrows.entity;
 
+import fr.indiecog.superarrows.entity.projectile.arrow.ConfusionArrowEntity;
 import fr.indiecog.superarrows.entity.projectile.arrow.ExplosiveArrowEntity;
 import fr.indiecog.superarrows.entity.projectile.arrow.GlowingArrowEntity;
 import fr.indiecog.superarrows.entity.projectile.arrow.LightningArrowEntity;
@@ -27,6 +28,9 @@ public class SuperArrowsEntities {
             register("glowing_arrow",
                     FabricEntityTypeBuilder.create(SpawnGroup.MISC, GlowingArrowEntity::new));
 
+    public static final EntityType<ConfusionArrowEntity> CONFUSION_ARROW_ENTITY =
+            register("confusion_arrow",
+                    FabricEntityTypeBuilder.create(SpawnGroup.MISC, ConfusionArrowEntity::new));
 
     public static void init() {
     }
