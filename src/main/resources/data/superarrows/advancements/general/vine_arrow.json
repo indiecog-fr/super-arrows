@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "superarrows:vine_arrow"
+    },
+    "title": "Down It Goes",
+    "description": "A spiky elevator",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "superarrows:general/root",
+  "criteria": {
+    "has_vine_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "superarrows:vine_arrow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_vine_arrow"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}
