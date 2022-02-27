@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:confusion_arrow"
     },
-    "title": "Who am I ???",
-    "description": "Make a mob have an identity crisis",
+    "title": {
+      "translate": "advancements.general.confusion_arrow.title"
+    },
+    "description": {
+      "translate": "advancements.general.confusion_arrow.description"
+    },
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

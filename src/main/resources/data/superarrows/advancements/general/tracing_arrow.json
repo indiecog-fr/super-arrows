@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:tracing_arrow"
     },
-    "title": "Don't Stop Me Now",
-    "description": "Shoot at the speed of light",
+    "title": {
+      "translate": "advancements.general.tracing_arrow.title"
+    },
+    "description": {
+      "translate": "advancements.general.tracing_arrow.description"
+    },
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

@@ -2,7 +2,21 @@
   "item.superarrows.explosive_arrow" : "Flèche Explosive",
   "item.superarrows.glowing_arrow" : "Flèche Scintillante",
   "item.superarrows.lightning_arrow": "Flèche Eclair",
-  "item.superarrows.vine_arrow": "Flèche De Vigne"
+  "item.superarrows.vine_arrow": "Flèche De Vigne",
   "item.superarrows.tracing_arrow": "Flèche traçante",
-  "item.superarrows.confusion_arrow": "Flèche De Confusion"
+  "item.superarrows.confusion_arrow": "Flèche De Confusion",
+  "advancements.general.explosive_arrow.title": "Ca Va Péter !!!",
+  "advancements.general.explosive_arrow.description": "J'aime l'odeur de la Poudre",
+  "advancements.general.glowing_arrow.title": "Plus Peur du Noir",
+  "advancements.general.glowing_arrow.description": "La Lumière Au Fond Du Tunnel",
+  "advancements.general.lightning_arrow.title": "Même les Dieux tremblent",
+  "advancements.general.lightning_arrow.description": "Devenir un Dieu",
+  "advancements.general.tracing_arrow.title": "Vers l'Infini et au-delà",
+  "advancements.general.tracing_arrow.description": "Plus Vite Que La Lumière",
+  "advancements.general.confusion_arrow.title": "Qui suis-je ???",
+  "advancements.general.confusion_arrow.description": "Crise Existentielle En Approche",
+  "advancements.general.root.title": "Super Arrows",
+  "advancements.general.root.description": "Un Grand Pouvoir Implique de Grandes Responsabilités",
+  "advancements.general.vine_arrow.title": "Ca Dégringole !!!",
+  "advancements.general.vine_arrow.description": "Un Ascenseur qui pique !"
 }

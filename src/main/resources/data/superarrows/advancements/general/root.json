@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:explosive_arrow"
     },
-    "title": "Super Arrows",
-    "description": "Here comes great responsibilities",
+    "title": {
+      "translate": "advancements.general.root.title"
+    },
+    "description": {
+      "translate": "advancements.general.explosive_arrow.description"
+    },
     "background": "superarrows:textures/gui/advancements/background/superarrows.png",
     "show_toast": true,
     "announce_to_chat": true,

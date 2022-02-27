@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:explosive_arrow"
     },
-    "title": "Let's go BOOM !",
-    "description": "Time to go crazy !",
+    "title": {
+      "translate": "advancements.general.explosive_arrow.title"
+    },
+    "description": {
+      "translate": "advancements.general.explosive_arrow.description"
+    },
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

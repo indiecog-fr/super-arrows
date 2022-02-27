@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:lightning_arrow"
     },
-    "title": "Even Zeus is scared of you",
-    "description": "Become a god !",
+    "title": {
+      "translate": "advancements.general.lightning_arrow.title"
+    },
+    "description": {
+      "translate": "advancements.general.lightning_arrow.description"
+    },
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

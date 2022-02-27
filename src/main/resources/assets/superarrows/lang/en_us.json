@@ -4,5 +4,19 @@
   "item.superarrows.lightning_arrow": "Lightning Arrow",
   "item.superarrows.vine_arrow": "Vine Arrow",
   "item.superarrows.tracing_arrow": "Tracing Arrow",
-  "item.superarrows.confusion_arrow": "Confusion Arrow"
+  "item.superarrows.confusion_arrow": "Confusion Arrow",
+  "advancements.general.explosive_arrow.title": "Let's go BOOM !",
+  "advancements.general.explosive_arrow.description": "Time to go crazy !",
+  "advancements.general.glowing_arrow.title": "No More Nyctophobia",
+  "advancements.general.glowing_arrow.description": "Spread Light Around You",
+  "advancements.general.lightning_arrow.title": "Even Zeus Is Scared Of You",
+  "advancements.general.lightning_arrow.description": "Become A God !",
+  "advancements.general.tracing_arrow.title": "To Infinity And Beyond",
+  "advancements.general.tracing_arrow.description": "Shoot At The Speed Of Light",
+  "advancements.general.confusion_arrow.title": "Who Am I ???",
+  "advancements.general.confusion_arrow.description": "Make A Mob Have An Identity Crisis",
+  "advancements.general.root.title": "Super Arrows",
+  "advancements.general.root.description": "Here Comes Great Responsibilities",
+  "advancements.general.vine_arrow.title": "Down It Goes",
+  "advancements.general.vine_arrow.description": "A spiky elevator"
 }

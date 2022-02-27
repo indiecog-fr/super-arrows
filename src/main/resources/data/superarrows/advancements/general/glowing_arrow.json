@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:glowing_arrow"
     },
-    "title": "No more Nyctophobia",
-    "description": "Spread light around you",
+    "title": {
+      "translate": "advancements.general.glowing_arrow.title"
+    },
+    "description": {
+      "translate": "advancements.general.glowing_arrow.description"
+    },
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
