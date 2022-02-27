@@ -5,6 +5,7 @@ import fr.indiecog.superarrows.entity.projectile.arrow.GlowingArrowEntityRendere
 import fr.indiecog.superarrows.renderer.ConfusionArrowEntityRenderer;
 import fr.indiecog.superarrows.renderer.ExplosiveArrowEntityRenderer;
 import fr.indiecog.superarrows.renderer.LightningArrowEntityRenderer;
+import fr.indiecog.superarrows.renderer.TracingArrowEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -17,7 +18,7 @@ public class SuperArrowsModClient implements ClientModInitializer {
         EntityRendererRegistry.register(SuperArrowsEntities.GLOWING_ARROW_ENTITY, GlowingArrowEntityRenderer::new);
         EntityRendererRegistry.register(SuperArrowsEntities.EXPLOSIVE_ARROW_ENTITY, ExplosiveArrowEntityRenderer::new);
         EntityRendererRegistry.register(SuperArrowsEntities.LIGHTNING_ARROW_ENTITY, LightningArrowEntityRenderer::new);
+        EntityRendererRegistry.register(SuperArrowsEntities.TRACING_ARROW_ENTITY, TracingArrowEntityRenderer::new);
         EntityRendererRegistry.register(SuperArrowsEntities.CONFUSION_ARROW_ENTITY, ConfusionArrowEntityRenderer::new);
-
     }
 }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PAP",
+    "ALA",
+    "PAP"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:ender_pearl"
+    },
+    "A": {
+      "item": "minecraft:arrow"
+    },
+    "P": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "superarrows:tracing_arrow",
+    "count": 4
+  }
+}
