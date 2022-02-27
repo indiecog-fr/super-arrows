@@ -3,8 +3,12 @@
     "icon": {
       "item": "superarrows:vine_arrow"
     },
-    "title": "Down It Goes",
-    "description": "A spiky elevator",
+    "title": {
+      "translate": "advancements.general.vine_arrow.title"
+    },
+    "description": {
+      "translate": "advancements.general.vine_arrow.description"
+    },
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
