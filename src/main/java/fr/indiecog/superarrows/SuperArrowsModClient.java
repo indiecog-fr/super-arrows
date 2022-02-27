@@ -2,6 +2,7 @@ package fr.indiecog.superarrows;
 
 import fr.indiecog.superarrows.entity.SuperArrowsEntities;
 import fr.indiecog.superarrows.entity.projectile.arrow.GlowingArrowEntityRenderer;
+import fr.indiecog.superarrows.renderer.ConfusionArrowEntityRenderer;
 import fr.indiecog.superarrows.renderer.ExplosiveArrowEntityRenderer;
 import fr.indiecog.superarrows.renderer.LightningArrowEntityRenderer;
 import fr.indiecog.superarrows.renderer.TracingArrowEntityRenderer;
@@ -18,5 +19,6 @@ public class SuperArrowsModClient implements ClientModInitializer {
         EntityRendererRegistry.register(SuperArrowsEntities.EXPLOSIVE_ARROW_ENTITY, ExplosiveArrowEntityRenderer::new);
         EntityRendererRegistry.register(SuperArrowsEntities.LIGHTNING_ARROW_ENTITY, LightningArrowEntityRenderer::new);
         EntityRendererRegistry.register(SuperArrowsEntities.TRACING_ARROW_ENTITY, TracingArrowEntityRenderer::new);
+        EntityRendererRegistry.register(SuperArrowsEntities.CONFUSION_ARROW_ENTITY, ConfusionArrowEntityRenderer::new);
     }
 }

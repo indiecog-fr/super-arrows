@@ -2,5 +2,6 @@
   "item.superarrows.explosive_arrow" : "Flèche Explosive",
   "item.superarrows.glowing_arrow" : "Flèche Scintillante",
   "item.superarrows.lightning_arrow": "Flèche Eclair",
-  "item.superarrows.tracing_arrow": "Flèche traçante"
+  "item.superarrows.tracing_arrow": "Flèche traçante",
+  "item.superarrows.confusion_arrow": "Flèche De Confusion"
 }
