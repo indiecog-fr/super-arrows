@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PAP",
+    "ALA",
+    "PAP"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:weeping_vines"
+    },
+    "A": {
+      "item": "minecraft:arrow"
+    },
+    "P": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "superarrows:vine_arrow",
+    "count": 4
+  }
+}
