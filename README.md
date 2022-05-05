@@ -1,2 +1,16 @@
 # SuperArrows
-an arrows type expension mod
+A mod that adds multiples arrows with fun effects : 
+
+ - Explosive
+ - Lightning
+ - Glowing
+ - Confusion
+ - Vine
+ - Tracing
+
+# Sponsor
+
+We are currently sponsoring RC Lance for a babyfoot competition at the K'Fet
+
+Please cheer for them !!!
+
