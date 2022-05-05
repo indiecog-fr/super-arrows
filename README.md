@@ -10,7 +10,7 @@ A mod that adds multiples arrows with fun effects :
 
 # Sponsor
 
-We are currently sponsoring RC Lance for a babyfoot competition at the K'Fet
+We are currently sponsoring RC Lens for a babyfoot competition at the K'Fet
 
 Please cheer for them !!!
 
